@@ -47,7 +47,7 @@ public class Persona {
     
     /**
      * Imposta il valore dell'altezza della persona
-     * @param altezza 
+     * @param altezza Altezza
      */
     public void setAltezza(Double altezza) {
         this.altezza = altezza;
@@ -55,7 +55,7 @@ public class Persona {
     
     /**
      * Restituisce il cognome della persona
-     * @return cognome
+     * @return cognome 
      */
     public String getCognome() {
         return cognome;
@@ -63,7 +63,7 @@ public class Persona {
     
     /**
      * Imposta il cognome della persona
-     * @param cognome 
+     * @param cognome Cognome
      */
     public void setCognome(String cognome) {
         this.cognome = cognome;
@@ -79,7 +79,7 @@ public class Persona {
     
     /**
      * Imposta la data di nascita della persona
-     * @param dataDiNascita 
+     * @param dataDiNascita DataDiNascita
      */
     public void setDataDiNascita(String dataDiNascita) {
         this.dataDiNascita = dataDiNascita;
@@ -95,7 +95,7 @@ public class Persona {
     
     /**
      * Imposta il nome della persona
-     * @param nome 
+     * @param nome Nome
      */
     public void setNome(String nome) {
         this.nome = nome;
@@ -111,7 +111,7 @@ public class Persona {
     
     /**
      * Imposta il peso della persona
-     * @param peso 
+     * @param peso Peso
      */
     public void setPeso(Float peso) {
         this.peso = peso;
@@ -119,7 +119,7 @@ public class Persona {
     
     /**
      * Restituisce le informazione legate alla persona
-     * @return info
+     * @return Riepilogo Caratteristiche
      */
     public String info(){
         String info;
