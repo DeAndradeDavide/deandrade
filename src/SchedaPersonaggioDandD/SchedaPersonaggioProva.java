@@ -8,6 +8,6 @@ package SchedaPersonaggioDandD;
 public class SchedaPersonaggioProva {
     
     public static void main(String[] args) {
-        SchedaPersonaggioDandD Kefir = new SchedaPersonaggioDandD
+        SchedaPersonaggioDandD Kefir = new SchedaPersonaggioDandD();
     }
 }
