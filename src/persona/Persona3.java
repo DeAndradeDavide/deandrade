@@ -208,7 +208,7 @@ public class Persona3 {
         return info;
     }
     
-    public Integer calcoloEta(String dataDiNascita){
+    public void calcoloEta(String dataDiNascita){
         Integer eta;
         
         SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
@@ -238,8 +238,7 @@ public class Persona3 {
         
         if(mm < mmOggi)
                 eta = eta + 1;
+        System.out.println("Anni: " + eta);
         
-        
-        return eta;
     }
 }
