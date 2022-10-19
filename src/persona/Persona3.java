@@ -1,5 +1,8 @@
 package persona;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 /**
  * La classe Persona1 definisce alcune caratteristiche di un essere umano
  *
@@ -8,10 +11,10 @@ package persona;
  */
 public class Persona3 {
 
-    private Double altezza;
-    private String cognome;
-    private String nome;
-    private Float peso;
+    public Double altezza;
+    public String cognome;
+    public String nome;
+    public Float peso;
     private String dataDiNascita;
 
     /**
@@ -33,8 +36,6 @@ public class Persona3 {
         this.cognome = cognome;
         this.nome = nome;
         this.peso = peso;
-        
-        this.setDataDiNascita(dataDiNascita);
     }
 
     /**
@@ -51,7 +52,7 @@ public class Persona3 {
      *
      * @param altezza Altezza
      */
-    final public void setAltezza(Double altezza) {
+    public void setAltezza(Double altezza) {
         if(altezza<3 && altezza>0.5)
             this.altezza = altezza;
         else
@@ -72,7 +73,7 @@ public class Persona3 {
      *
      * @param cognome Cognome
      */
-    final public void setCognome(String cognome) {
+    public void setCognome(String cognome) {
         if(cognome == null)
             this.cognome = null;
         else
@@ -114,7 +115,7 @@ public class Persona3 {
      *
      * @param peso Peso
      */
-    final public void setPeso(Float peso) {
+    public void setPeso(Float peso) {
         if(peso>1 && peso<200)
             this.peso = peso;
         else
@@ -205,5 +206,40 @@ public class Persona3 {
                 + "Peso:            " + this.peso + "\n";
 
         return info;
-    }    
+    }
+    
+    public Integer calcoloEta(String dataDiNascita){
+        Integer eta;
+        
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+        Calendar calendario = Calendar.getInstance();
+
+        Date dateObj = calendario.getTime();
+        String dataOggi = formato.format(dateObj);
+        
+        String[] d = dataDiNascita.split("/");
+        
+        Integer gg = Integer.valueOf(d[0]);
+        Integer mm = Integer.valueOf(d[1]);
+        Integer aaaa = Integer.valueOf(d[2]);
+        
+        String[] dOggi = dataOggi.split("/");
+        
+        Integer ggOggi = Integer.valueOf(dOggi[0]);
+        Integer mmOggi = Integer.valueOf(dOggi[1]);
+        Integer aaaaOggi = Integer.valueOf(dOggi[2]);
+        
+        eta = aaaaOggi - aaaa - 1;
+        
+        if(mm == mmOggi){
+            if(gg <= ggOggi)
+                eta = eta + 1;
+        }
+        
+        if(mm < mmOggi)
+                eta = eta + 1;
+        
+        
+        return eta;
+    }
 }

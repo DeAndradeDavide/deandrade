@@ -13,9 +13,14 @@ public class Persona3Prova {
         // TODO code application logic here
         Persona3 p1 = new Persona3();
         Persona3 p2 = new Persona3(1.80, "cognome", "nome", 70f);
-        p2.setDataDiNascita("05/10/2022");
+        p2.setDataDiNascita("11/10/2000");
         String info = p2.info();
         System.out.print(info);
+        
+        System.out.print("L'eta' e': ");
+        Integer calcoloEta = p2.calcoloEta("11/10/2000");
+        System.out.println(calcoloEta);
+        
     }
     
 }
