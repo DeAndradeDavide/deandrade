@@ -4,20 +4,20 @@ package persona;
  * La classe Persona1 definisce alcune caratteristiche di un essere umano
  *
  * @author davide.deandrade
- * @version 2.0 28/09/2022
+ * @version 3.0 19/10/2022
  */
-public class Persona2 {
+public class Persona3 {
 
-    public Double altezza;
-    public String cognome;
-    public String nome;
-    public Float peso;
+    private Double altezza;
+    private String cognome;
+    private String nome;
+    private Float peso;
     private String dataDiNascita;
 
     /**
      * Costruttore della classe Persona senza parametri
      */
-    public Persona2() {
+    public Persona3() {
     }
 
     /**
@@ -28,7 +28,7 @@ public class Persona2 {
      * @param nome Nome
      * @param peso Peso
      */
-    public Persona2(Double altezza, String cognome, String nome, Float peso) {
+    public Persona3(Double altezza, String cognome, String nome, Float peso) {
         this.altezza = altezza;
         this.cognome = cognome;
         this.nome = nome;
@@ -51,8 +51,11 @@ public class Persona2 {
      *
      * @param altezza Altezza
      */
-    public void setAltezza(Double altezza) {
-        this.altezza = altezza;
+    final public void setAltezza(Double altezza) {
+        if(altezza<3 && altezza>0.5)
+            this.altezza = altezza;
+        else
+            this.altezza = null;
     }
 
     /**
@@ -69,8 +72,11 @@ public class Persona2 {
      *
      * @param cognome Cognome
      */
-    public void setCognome(String cognome) {
-        this.cognome = cognome;
+    final public void setCognome(String cognome) {
+        if(cognome == null)
+            this.cognome = null;
+        else
+            this.cognome = cognome;
     }
 
     /**
@@ -88,7 +94,10 @@ public class Persona2 {
      * @param nome Nome
      */
     public void setNome(String nome) {
-        this.nome = nome;
+        if(nome == null)
+            this.nome = null;
+        else
+            this.nome = nome;
     }
 
     /**
@@ -105,8 +114,11 @@ public class Persona2 {
      *
      * @param peso Peso
      */
-    public void setPeso(Float peso) {
-        this.peso = peso;
+    final public void setPeso(Float peso) {
+        if(peso>1 && peso<200)
+            this.peso = peso;
+        else
+            this.peso = null;
     }
 
     /**
@@ -193,5 +205,5 @@ public class Persona2 {
                 + "Peso:            " + this.peso + "\n";
 
         return info;
-    }
+    }    
 }
