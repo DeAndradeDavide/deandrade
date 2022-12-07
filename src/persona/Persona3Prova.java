@@ -1,4 +1,4 @@
-package persona;
+ package persona;
 
 /**
  *
@@ -17,9 +17,7 @@ public class Persona3Prova {
         String info = p2.info();
         System.out.print(info);
         
-        System.out.print("L'eta' e': ");
-        Integer calcoloEta = p2.calcoloEta("11/10/2000");
-        System.out.println(calcoloEta);
+        p2.calcoloEta(p2.getDataDiNascita());
         
     }
     
