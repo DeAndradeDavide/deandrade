@@ -306,4 +306,12 @@ public class Persona4 {
         }
         return verifica;
     }
+    
+    public static Boolean verificaOmonimia(Persona4 p, Persona4 p2){
+        Boolean verifica = false;
+        if (p.nome.equals(p2.nome) && p.cognome.equals(p2.cognome)){
+            verifica = true;
+        }
+        return verifica;
+    }
 }
