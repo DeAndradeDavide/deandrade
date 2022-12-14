@@ -4,8 +4,6 @@
  */
 package persona;
 
-import persona.Persona4;
-
 /**
  *
  * @author cgrav

@@ -23,10 +23,10 @@ public class Farmacia {
         this.gp = new GestioneProdotti();
     }
     
-    public Farmacia(String nome, Farmacista[] dipendenti, GestioneProdoti gp) {
-        this(nome, dipendenti);
-        this.setGp(gp);
-    }
+    //public Farmacia(String nome, Farmacista[] dipendenti, GestioneProdoti gp) {
+        //this(nome, dipendenti);
+        //this.setGp(gp);
+    //}
 
     public String getNome() {
         return nome;
@@ -43,7 +43,7 @@ public class Farmacia {
     public void setDipendenti(Farmacista[] dipendenti) {
         this.dipendenti = dipendenti.clone();
         for(int i=0; i<dipendenti.length; i++){
-            dipendenti[i].setGPF(gp);
+            //dipendenti[i].setGPF(gp);
         }
     }
 
@@ -51,7 +51,7 @@ public class Farmacia {
         return gp;
     }
 
-    public void setGp(GestioneProdotti gp) {
+    public final void setGp(GestioneProdotti gp) {
         this.gp = gp;
     }
     
