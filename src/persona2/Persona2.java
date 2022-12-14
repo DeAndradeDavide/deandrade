@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package persona;
+package persona2;
 
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
@@ -14,7 +14,7 @@ import java.time.ZonedDateTime;
  * @version 1.0 del 28/09/22
  */
 
-public class Persona4 {
+public class Persona2 {
     public Double altezza;
     public String cognome;
     public String dataDiNascita;
@@ -31,7 +31,7 @@ public class Persona4 {
      * {@link #setDataDiNascita(String dataDiNascita)}
      */
     
-    public Persona4() {
+    public Persona2() {
         numeroIstanze=numeroIstanze+1;
     }
     /**
@@ -43,7 +43,7 @@ public class Persona4 {
      * @param peso 
      */
 
-    public Persona4(Double altezza, String cognome, String dataDiNascita, String nome, Float peso) {
+    public Persona2(Double altezza, String cognome, String dataDiNascita, String nome, Float peso) {
         setDataDiNascita(dataDiNascita);
         setPeso(peso);
         setNome(nome);
@@ -51,7 +51,7 @@ public class Persona4 {
         setAltezza(altezza);
         numeroIstanze=numeroIstanze+1;
     }
-    public Persona4(Persona4 persona){
+    public Persona2(Persona2 persona){
     this(persona.getAltezza(),persona.getCognome(),persona.getDataDiNascita(),persona.getNome(),persona.getPeso());
     }
     /**
@@ -263,7 +263,7 @@ public class Persona4 {
         }
         
     }
-    public boolean verificaOmonimia(Persona4 persona){
+    public boolean verificaOmonimia(Persona2 persona){
     boolean v=true;
     if(!this.nome.equals(persona.getNome())){
         v=false;   
