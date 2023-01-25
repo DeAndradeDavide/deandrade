@@ -21,7 +21,7 @@ public class Libro {
     public Libro() {
     }
 
-    public Libro(String titolo, String casaEditrice, String[] autori, Integer nPagine) {
+    public Libro(String titolo, String casaEditrice, String[] autori, Integer nPagine) throws Exception {
         setAutori(autori);
         setCasaEditrice(casaEditrice);
         setTitolo(titolo);
@@ -33,7 +33,7 @@ public class Libro {
         return autori.clone();
     }
 
-    final public void setAutori(String[] autori) {
+    final public void setAutori(String[] autori) throws Exception {
         
         int n=0;
         if(autori != null){
@@ -47,6 +47,8 @@ public class Libro {
                 this.autori[i] = autori[i];
         
             }
+        }else{
+            throw new Exception("autori non valido");
         }
     }
 
@@ -54,13 +56,15 @@ public class Libro {
         return casaEditrice;
     }
 
-    final public void setCasaEditrice(String casaEditrice) {
+    final public void setCasaEditrice(String casaEditrice) throws Exception {
         boolean a = true;
-        if(casaEditrice != null)
+        if(casaEditrice != null){
             for(int i=0; i<casaEditrice.length();i++)
                 if(casaEditrice.charAt(i) == (char)255)
                     a = false;
-        
+        }else{
+            throw new Exception("casa editrice non valido");
+        }
         if(a)
         this.casaEditrice = casaEditrice;
     }
@@ -73,20 +77,26 @@ public class Libro {
         return nPagine;
     }
 
-    final public void setnPagine(Integer nPagine) {
-        if(nPagine != null && nPagine%2==0)
+    final public void setnPagine(Integer nPagine) throws Exception {
+        if(nPagine != null && nPagine%2==0){
             this.nPagine = nPagine;
+            
+        }else{
+            throw new Exception("numero pagine non valido");
+        }
     }
 
     final public String getTitolo() {
         return titolo;
     }
 
-    final public void setTitolo(String titolo) {
+    final public void setTitolo(String titolo) throws Exception {
         if(titolo != null){
             int s = (int)titolo.charAt(0);
             if(s>64 && s<91)
                 this.titolo = titolo;
+        }else{
+            throw new Exception("titolo non valido");
         }
     }
     

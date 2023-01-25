@@ -11,7 +11,7 @@ import persona.Persona4;
  *
  * @author valerio.gravili
  */
-public class ProvaPersona4 {
+public class Persona4Prova {
 
     /**
      * @param args the command line arguments
